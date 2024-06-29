@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { menuItems } from "./constants/MenuItems";
-import { cn } from "@/lib/cn";
+import { cn } from "@/utils/tailwind";
 
 export const ResponsiveSidebar = () => {
     const location = useLocation();

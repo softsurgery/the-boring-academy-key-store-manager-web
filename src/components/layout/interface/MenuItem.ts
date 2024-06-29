@@ -1,5 +1,13 @@
-export interface MenuItem{
-    label: string;
-    icon: React.ReactNode;
-    href: string;
+export interface IMenuItem {
+  id: number;
+  label: string;
+  icon: JSX.Element;
+  href: string;
+}
+
+export interface IMenuCategory {
+  id: number;
+  title: string;
+  icon: JSX.Element;
+  items: IMenuItem[];
 }
