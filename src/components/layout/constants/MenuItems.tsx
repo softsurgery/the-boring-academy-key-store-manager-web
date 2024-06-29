@@ -1,5 +1,15 @@
 import { Home, School, Users, Box, KeySquare, Settings } from "lucide-react";
 import { IMenuCategory } from "../interface/MenuItem";
+import {
+  Home,
+  School,
+  Users,
+  Box,
+  KeySquare,
+  Settings,
+  AudioWaveformIcon,
+  Book,
+} from "lucide-react";
 
 const props = { className: "h-4 w-4 mr-2" };
 
@@ -57,5 +67,5 @@ export const menuItems: IMenuCategory[] = [
       { id: 11, label: "General Settings", icon: <Settings {...props} />, href: "/settings/general" },
       { id: 12, label: "Profile Settings", icon: <Settings {...props} />, href: "/settings/profile" }
     ],
-  },
+  }
 ];

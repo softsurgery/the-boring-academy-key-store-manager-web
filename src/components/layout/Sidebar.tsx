@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import { Link, useLocation } from "react-router-dom";
 
 interface SidebarProps {
   className?: string;
@@ -63,6 +64,21 @@ export default function Sidebar({ className }: SidebarProps) {
           </AccordionItem>
         ))}
       </Accordion>
+      {menuItems.map(({ label, icon, href }) => (
+        <Link
+          key={label}
+          to={href}
+          className={cn(
+            "flex items-center gap-3 rounded-lg px-3 py-2 transition-all",
+            location.pathname === href
+              ? "bg-muted text-foreground"
+              : "text-muted-foreground hover:text-foreground"
+          )}
+        >
+          {icon}
+          {label}
+        </Link>
+      ))}
     </nav>
   );
 }
